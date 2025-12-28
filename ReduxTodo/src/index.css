@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #2563eb;
+}
+
+/* DARK */
+[data-theme="dark"] {
+  --bg: #0b1220; /* deep navy */
+  --text: #e5e7eb; /* soft white */
+  --primary: #60a5fa; /* calm blue */
+}
+
+/* NEON (cyberpunk but readable) */
+[data-theme="neon"] {
+  --bg: #050014; /* deep purple-black */
+  --text: #7cffd1; /* mint neon */
+  --primary: #ff4fd8; /* neon pink */
+}
+
+/* PINK (soft UI pink) */
+[data-theme="pink"] {
+  --bg: #f472b6; /* very light blush */
+  --text: #5b0f2e; /* dark wine */
+  --primary: #f472b6; /* rose pink */
+}
+
+/* ORANGE (warm & clean) */
+[data-theme="orange"] {
+  --bg: #fb923c; /* warm cream */
+  --text: #6b2f00; /* coffee brown */
+  --primary: #fb923c; /* bright orange */
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bg-theme {
+  background-color: var(--bg);
+}
+.text-theme {
+  color: var(--text);
+}
+.text-primary {
+  color: var(--primary);
+}
+
+.btn.show {
+  border: none;
+}
+
+.theme-icon {
+  color: var(--text);
+}
+
+.dropdown-toggle.btn:after {
+  display: none;
+}
